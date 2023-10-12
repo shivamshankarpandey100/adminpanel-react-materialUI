@@ -26,8 +26,9 @@ import SubjectIcon from '@mui/icons-material/Subject';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signOutAsync } from '../features/auth/authSlice';
 const drawerWidth = 240;
-
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
@@ -96,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function SideBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
-
+  const dispatch=useDispatch();
     const navigate=useNavigate();
 
   const handleDrawerOpen = () => {
@@ -106,7 +107,11 @@ export default function SideBar() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  const handleLogout=(e)=>{
+    e.preventDefault();
+      dispatch(signOutAsync());
+      
+ }
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -309,7 +314,7 @@ export default function SideBar() {
          
 
 
-            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/Logout")}}>
+            <ListItem  disablePadding sx={{ display: 'block' }} onClick={(e)=>handleLogout(e)}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
