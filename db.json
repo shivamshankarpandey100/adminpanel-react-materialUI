@@ -11,6 +11,12 @@
       "password": "Qwerty1234",
       "username": "Mohmmad Zaid",
       "id": 2
+    },
+    {
+      "email": "JhonDoe59@gmail.com",
+      "password": "Qwerty1234",
+      "username": "Jhon Doe",
+      "id": 3
     }
   ]
 }
