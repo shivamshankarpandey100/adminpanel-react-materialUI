@@ -11,7 +11,7 @@ export default function AddStudent() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 ,marginTop:"55px"}}>
         
       <Typography variant='h4'>
-            Add Student
+            Add student
         </Typography>
       </Box>
     </Box>
