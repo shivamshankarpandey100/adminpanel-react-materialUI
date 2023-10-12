@@ -125,7 +125,7 @@ export default function SideBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-           Material UI Dashboard
+           Admin Panel 
           </Typography>
         </Toolbar>
       </AppBar>
