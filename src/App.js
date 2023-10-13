@@ -17,7 +17,7 @@ export default function App() {
  <>
   <BrowserRouter>
     <Routes>
-        {/* <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
+        <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
         <Route path='/User' element={ <Protected> <User /></Protected> }></Route>
         <Route path='/AddStudent' element={<Protected> <AddStudent /></Protected> }></Route>
         <Route path='/StudentList' element={<Protected> <StudentList /></Protected>}></Route>
@@ -26,8 +26,8 @@ export default function App() {
         <Route path='/UserList' element={<Protected><UserList /></Protected>}></Route>
         <Route path='/Logout' element={<Logout />}></Route>
         <Route path='/Login' element={<LoginPage />}></Route>
-        <Route path='/Signup' element={<SignUpPage />}></Route> */}
-            <Route path='/' element={  <Dashboard />}></Route>
+        <Route path='/Signup' element={<SignUpPage />}></Route>
+            {/* <Route path='/' element={  <Dashboard />}></Route>
         <Route path='/User' element={  <User /> }></Route>
         <Route path='/AddStudent' element={ <AddStudent /> }></Route>
         <Route path='/StudentList' element={ <StudentList />}></Route>
@@ -36,7 +36,7 @@ export default function App() {
         <Route path='/UserList' element={<UserList />}></Route>
         <Route path='/Logout' element={<Logout />}></Route>
         <Route path='/Login' element={<LoginPage />}></Route>
-        <Route path='/Signup' element={<SignUpPage />}></Route>
+        <Route path='/Signup' element={<SignUpPage />}></Route> */}
     </Routes>
   </BrowserRouter>
  </>
