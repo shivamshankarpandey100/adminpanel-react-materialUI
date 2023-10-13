@@ -21,7 +21,7 @@ export default function Signup() {
       <div className="fluid-container">
         <form
         noValidate
-          className="form"
+          className="form-box"
           onSubmit={handleSubmit((data) => {
             dispatch(
               createUserAsync({

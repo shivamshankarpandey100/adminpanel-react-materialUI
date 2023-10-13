@@ -25,7 +25,7 @@ export default function Login() {
  
         <form
         noValidate
-          className="form"
+          className="form-box"
           onSubmit={handleSubmit((data) => {
             dispatch(
               checkUserAsync({ email: data.email, password: data.password })
@@ -38,7 +38,7 @@ export default function Login() {
             <input
               id="email"
               {...register("email", {
-                required: "email is required",
+                required: "Email is required",
                 pattern: {
                   value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
                   message: "Email not valid",
