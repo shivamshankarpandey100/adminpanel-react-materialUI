@@ -81,6 +81,7 @@ export default function AddStudent() {
         setValue("DateOfBirth", "");
         setValue("Email", "");
         setValue("City", "");
+        setValue("CourseId", "");
       }
     } catch (error) {
       console.log(error);
@@ -262,7 +263,11 @@ export default function AddStudent() {
                 <div>
                   <label>
                     Select Course:
-                    <select className="select-dropdown">
+                    <select className="select-dropdown"
+                     {...register('CourseId', {
+                      required: 'Course  is required',
+                    })}
+                    >
                       <option value="" defaultChecked>
                         -SELECT-
                       </option>
@@ -276,6 +281,9 @@ export default function AddStudent() {
                       <option value="MBBS">MBBS</option>
                     </select>
                   </label>
+                  {errors.CourseId && (
+                    <p className="text-red-400">{errors.CourseId.message}</p>
+                  )}
                 </div>
 
                 <div className="button-container">
