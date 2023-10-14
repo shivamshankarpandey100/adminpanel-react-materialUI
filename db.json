@@ -6,5 +6,33 @@
       "username": "Mohmmad Zaid",
       "id": 1
     }
+  ],
+  "student": [
+    {
+      "StudentName": "Mohmmad Zaid",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaid759@gmail.com",
+      "DateOfBirth": "2001-04-11",
+      "City": "Luckn",
+      "Address": "Luckn",
+      "id": 1
+    },
+    {
+      "StudentName": "Mohmmad Zaid",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaid759@gmail.com",
+      "DateOfBirth": "2001-04-11",
+      "City": "Luckn",
+      "Address": "Luckn",
+      "id": 2
+    }
+  ],
+  "course": [
+    {
+      "CourseName": "Asd",
+      "CourseId": "2121212121222",
+      "CourseDescription": "asdsdasdsadsd",
+      "id": 1
+    }
   ]
 }

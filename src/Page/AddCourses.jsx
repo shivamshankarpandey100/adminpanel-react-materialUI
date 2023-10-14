@@ -1,18 +1,103 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SideBar from '../Component/SideBar'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useForm } from 'react-hook-form';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddCourses() {
+  const [error, setError] = useState(null);
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+
+  async function insertData(courseData) {
+    try {
+      const response = await fetch("http://localhost:8082/course", {
+        method: "POST",
+        body: JSON.stringify(courseData),
+        headers: { "content-type": "application/json" },
+      });
+
+      if (!response.ok) {
+        let message = response.statusText;
+        console.log(message);
+        if (message === "Not Found") {
+          toast.error("Ineternal server Error", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          throw new Error("Internal Server error");
+        } else {
+          toast.error(message, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          throw new Error(message);
+        }
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    }
+  }
+
+  async function handleButtonClick(courseData) {
+    setError(null); // Clear any previous errors
+    try {
+      const data = await insertData(courseData);
+      if (data) {
+        toast.success("Course Created Successfully", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setValue("CourseDescription", "");
+        setValue("CourseName", "");
+        setValue("CourseId", "");
+        
+      }
+    } catch (error) {
+      console.log(error);
+      toast(error, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setError(error);
+    }
+  }
   return (
+    <>
     <Box sx={{display:'flex'}}>
       <SideBar />
       <Box component="main" sx={{ flexGrow: 1, p: 3 ,marginTop:"55px"}}>
@@ -21,7 +106,7 @@ export default function AddCourses() {
             <form
               className="form"
               onSubmit={handleSubmit((data) => {
-                console.log(data);
+                handleButtonClick(data);
               })}
             >
               <p className="title">Course form </p>
@@ -74,7 +159,7 @@ export default function AddCourses() {
                 {errors.CourseId &&
                   errors.CourseId.type === "max" && (
                     <span role="text-red-400">
-                      Phone Number must contian 10 characters
+                    Course ID must contian 10 characters
                     </span>
                   )}
               </div>
@@ -102,7 +187,11 @@ export default function AddCourses() {
                   <p className="text-red-400">{errors.CourseDescription.message}</p>
                 )}
               </div>
-
+              {error && (
+                  <div>
+                    <p className="text-red-400">{error.message}</p>
+                  </div>
+                )}
               <div className="button-container">
                 <button type="reset" className="reset" value="Reset">
                   Reset
@@ -118,5 +207,7 @@ export default function AddCourses() {
           
           </Box>
     </Box>
+      <ToastContainer/>
+    </>
   )
 }
