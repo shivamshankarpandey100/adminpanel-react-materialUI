@@ -25,6 +25,16 @@
       "City": "Luckn",
       "Address": "Luckn",
       "id": 2
+    },
+    {
+      "StudentName": "Mohmmad Zaid",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaid759@gmail.com",
+      "DateOfBirth": "2001-04-16",
+      "City": "Lucknow",
+      "Address": "Lucknow",
+      "CourseId": "B.tech",
+      "id": 3
     }
   ],
   "course": [
