@@ -4,7 +4,7 @@
 export function createUser(userData) {
   return new Promise(async (resolve) => {
     console.log(userData);
-    const response = await fetch('http://localhost:8082/user', {
+    const response = await fetch('http://localhost:8082/user/saveuser', {
       method: 'POST',
       body: JSON.stringify(userData),
       headers: { 'content-type': 'application/json' },
@@ -44,7 +44,7 @@ export function checkUser(loginInfo) {
         headers: {
           "content-type": "application/json",
         },
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+       
       });
      
       if (response.ok) {
