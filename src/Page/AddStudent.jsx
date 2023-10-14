@@ -16,11 +16,24 @@ export default function AddStudent() {
   } = useForm();
 
   async function insertData(studentData) {
+   
     try {
-      const response = await fetch("http://localhost:8082/student", {
+       let data2 = {
+        studentName : studentData.StudentName,
+        dateOfBirth : studentData.DateOfBirth,
+        email: studentData.Email,
+        mobileNumber : studentData.MobileNumber,
+        address : studentData.Address,
+        city : studentData.City,
+        courseId : studentData.CourseId,
+       }
+       console.log(data2);
+      const response = await fetch("http://localhost:8082/student/savestudent", {
         method: "POST",
-        body: JSON.stringify(studentData),
+        body: JSON.stringify(data2),
         headers: { "content-type": "application/json" },
+        
+        
       });
 
       if (!response.ok) {
@@ -54,6 +67,7 @@ export default function AddStudent() {
       }
 
       const data = await response.json();
+      console.log(data);
       return data;
     } catch (error) {
       console.log(error);
@@ -109,7 +123,7 @@ export default function AddStudent() {
               <form
                 className="form"
                 onSubmit={handleSubmit((data) => {
-                  console.log(data);
+                
                   handleButtonClick(data);
                 })}
               >
@@ -292,7 +306,7 @@ export default function AddStudent() {
                   </button>
 
                   <button type="submit" className="submit-2 " value="Submit">
-                    Login
+                   Submit
                   </button>
                 </div>
               </form>

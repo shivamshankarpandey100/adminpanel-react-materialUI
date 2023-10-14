@@ -17,9 +17,15 @@ export default function AddCourses() {
 
   async function insertData(courseData) {
     try {
-      const response = await fetch("http://localhost:8082/course", {
+      let data3 = {
+        courseName: courseData.CourseName,
+        courseId: courseData.CourseId,
+        courseDetail: courseData.CourseDescription,
+      };      
+      console.log(courseData);
+      const response = await fetch("http://localhost:8082/course/savecourse", {
         method: "POST",
-        body: JSON.stringify(courseData),
+        body: JSON.stringify(data3),
         headers: { "content-type": "application/json" },
       });
 
@@ -198,7 +204,7 @@ export default function AddCourses() {
                 </button>
 
                 <button type="submit" className="submit-2 " value="Submit">
-                  Login
+                Submit
                 </button>
               </div>
             </form>
