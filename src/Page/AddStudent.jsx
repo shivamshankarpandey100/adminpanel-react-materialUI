@@ -299,9 +299,9 @@ export default function AddStudent() {
                       </option>
                       {courseList.map(
                         (course) =>
-                          // course.status === "1" && 
+                          course.status === true && 
                           (
-                            <option key={course.id} value={course.courseName}>
+                            <option key={course.id} value={course.courseId}>
                               {course.courseName}
                             </option>
                           )
