@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../Component/SideBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -6,8 +6,20 @@ import "./css/StudentForm.css";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchCoursesAsync,
+  selectCourses,
+} from "../features/course/courseSlice";
 export default function AddStudent() {
   const [error, setError] = useState(null);
+  const dispatch = useDispatch();
+  const courseList = useSelector(selectCourses);
+  console.log(courseList);
+  useEffect(() => {
+    dispatch(fetchCoursesAsync());
+  }, [dispatch]);
+
   const {
     register,
     handleSubmit,
@@ -16,25 +28,25 @@ export default function AddStudent() {
   } = useForm();
 
   async function insertData(studentData) {
-   
     try {
-       let data2 = {
-        studentName : studentData.StudentName,
-        dateOfBirth : studentData.DateOfBirth,
+      let data2 = {
+        studentName: studentData.StudentName,
+        dateOfBirth: studentData.DateOfBirth,
         email: studentData.Email,
-        mobileNumber : studentData.MobileNumber,
-        address : studentData.Address,
-        city : studentData.City,
-        courseId : studentData.CourseId,
-       }
-       console.log(data2);
-      const response = await fetch("http://localhost:8082/student/savestudent", {
-        method: "POST",
-        body: JSON.stringify(data2),
-        headers: { "content-type": "application/json" },
-        
-        
-      });
+        mobileNumber: studentData.MobileNumber,
+        address: studentData.Address,
+        city: studentData.City,
+        courseId: studentData.CourseId,
+      };
+      console.log(data2);
+      const response = await fetch(
+        "http://localhost:8082/student/savestudent",
+        {
+          method: "POST",
+          body: JSON.stringify(data2),
+          headers: { "content-type": "application/json" },
+        }
+      );
 
       if (!response.ok) {
         let message = response.statusText;
@@ -123,7 +135,6 @@ export default function AddStudent() {
               <form
                 className="form"
                 onSubmit={handleSubmit((data) => {
-                
                   handleButtonClick(data);
                 })}
               >
@@ -277,22 +288,24 @@ export default function AddStudent() {
                 <div>
                   <label>
                     Select Course:
-                    <select className="select-dropdown"
-                     {...register('CourseId', {
-                      required: 'Course  is required',
-                    })}
+                    <select
+                      className="select-dropdown"
+                      {...register("CourseId", {
+                        required: "Course  is required",
+                      })}
                     >
                       <option value="" defaultChecked>
                         -SELECT-
                       </option>
-                      <option value="B.tech">B.tech</option>
-                      <option value="Bio-Tech">Bio-Tech</option>
-                      <option value="BBA">BBA</option>
-                      <option value="BCA">BCA</option>
-                      <option value="MBA">MBA</option>
-                      <option value="MCA">MCA</option>
-                      <option value="LLB">LLB</option>
-                      <option value="MBBS">MBBS</option>
+                      {courseList.map(
+                        (course) =>
+                          // course.status === "1" && 
+                          (
+                            <option key={course.id} value={course.courseName}>
+                              {course.courseName}
+                            </option>
+                          )
+                      )}
                     </select>
                   </label>
                   {errors.CourseId && (
@@ -306,7 +319,7 @@ export default function AddStudent() {
                   </button>
 
                   <button type="submit" className="submit-2 " value="Submit">
-                   Submit
+                    Submit
                   </button>
                 </div>
               </form>

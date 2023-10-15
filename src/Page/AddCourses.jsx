@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+// http://localhost:8082/course/savecourse
 export default function AddCourses() {
   const [error, setError] = useState(null);
   const {

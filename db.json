@@ -39,10 +39,34 @@
   ],
   "course": [
     {
-      "CourseName": "Asd",
-      "CourseId": "2121212121222",
-      "CourseDescription": "asdsdasdsadsd",
+      "courseName": "Asd",
+      "courseId": "2121212121222",
+      "courseDetail": "asdsdasdsadsd",
       "id": 1
+    },
+    {
+      "courseName": "Asd",
+      "courseId": "2121212121222",
+      "courseDetail": "asdsdasdsadsd",
+      "id": 2
+    },
+    {
+      "courseName": "Asd",
+      "courseId": "2121212121222",
+      "courseDetail": "asdsdasdsadsd",
+      "id": 3
+    },
+    {
+      "courseName": "CSE AI&ML",
+      "courseId": "251467",
+      "courseDetail": "A good wuestion",
+      "id": 4
+    },
+    {
+      "courseName": "CSE AIDS",
+      "courseId": "5252525",
+      "courseDetail": "Asdsdsds",
+      "id": 5
     }
   ]
 }
