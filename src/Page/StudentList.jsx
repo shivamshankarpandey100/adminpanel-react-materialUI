@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchStudentsAsync, selectStudents } from '../features/student/studentSlice';
 
 export default function StudentList() {
- const column=["ID","Full Name","Mobile No:","Email","Course","Action"]
+ const column=["ID","Full Name","Mobile No:","Email","Course Id","Action"]
   const dispatch =useDispatch()
   const records=useSelector(selectStudents);
   console.log(records)
@@ -31,8 +31,9 @@ export default function StudentList() {
               </thead>
               <tbody>
                 {records.map((record, i) => (
-                  <tr key={i}>
-                    <td>{record.ID}</td>
+                   record.status===true &&
+                 ( <tr key={i}>
+                    <td>{record.id}</td>
                     <td>{record.studentName}</td>
                     <td>{record.mobileNumber}</td>
                     <td>{record.email}</td>
@@ -41,7 +42,7 @@ export default function StudentList() {
                       <button className='btn1'>Update</button>
                       <button className='btn2'>Remove</button>
                     </td>
-                  </tr>
+                  </tr>)
                 ))}
               </tbody>
             </table>

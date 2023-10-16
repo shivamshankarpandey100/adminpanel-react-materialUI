@@ -33,16 +33,18 @@ export default function CoursesList() {
               </thead>
               <tbody>
                 {records.map((record, i) => (
-                  <tr key={i}>
-                    <td>{record.ID}</td>
-                    <td>{record.CourseId}</td>
-                    <td>{record.CourseName}</td>
-                    <td>{record.CourseDescription}</td>
-                    <td>
-                      <button className='btn1'>Update</button>
-                      <button className='btn2'>Remove</button>
-                    </td>
-                  </tr>
+                 record.status===true &&
+                 (<tr key={i}>
+                   <td>{i + 1}</td>
+                   <td>{record.courseName}</td>
+                   <td>{record.courseId}</td>                
+                   <td>{record.courseDetail}</td>
+                   <td>
+                     <button className='btn1'>Update</button>
+                     <button className='btn2'>Remove</button>
+                   </td>
+                 </tr>
+                 )
                 ))}
               </tbody>
             </table>
@@ -53,6 +55,3 @@ export default function CoursesList() {
     </Box>
   )
 }
-
-
-
