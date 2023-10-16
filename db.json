@@ -1,72 +1,101 @@
-{
-  "user": [
-    {
-      "email": "mohmmadzaid759@gmail.com",
-      "password": "Qwerty1234",
-      "username": "Mohmmad Zaid",
-      "id": 1
-    }
-  ],
-  "student": [
-    {
-      "StudentName": "Mohmmad Zaid",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaid759@gmail.com",
-      "DateOfBirth": "2001-04-11",
-      "City": "Luckn",
-      "Address": "Luckn",
-      "id": 1
-    },
-    {
-      "StudentName": "Mohmmad Zaid",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaid759@gmail.com",
-      "DateOfBirth": "2001-04-11",
-      "City": "Luckn",
-      "Address": "Luckn",
-      "id": 2
-    },
-    {
-      "StudentName": "Mohmmad Zaid",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaid759@gmail.com",
-      "DateOfBirth": "2001-04-16",
-      "City": "Lucknow",
-      "Address": "Lucknow",
-      "CourseId": "B.tech",
-      "id": 3
-    }
-  ],
-  "course": [
-    {
-      "courseName": "Asd",
-      "courseId": "2121212121222",
-      "courseDetail": "asdsdasdsadsd",
-      "id": 1
-    },
-    {
-      "courseName": "Asd",
-      "courseId": "2121212121222",
-      "courseDetail": "asdsdasdsadsd",
-      "id": 2
-    },
-    {
-      "courseName": "Asd",
-      "courseId": "2121212121222",
-      "courseDetail": "asdsdasdsadsd",
-      "id": 3
-    },
-    {
-      "courseName": "CSE AI&ML",
-      "courseId": "251467",
-      "courseDetail": "A good wuestion",
-      "id": 4
-    },
-    {
-      "courseName": "CSE AIDS",
-      "courseId": "5252525",
-      "courseDetail": "Asdsdsds",
-      "id": 5
-    }
-  ]
-}
+
+  
+  
+  
+  {
+    "users": [
+      {
+        "ID": "1",
+        "Name": "Shivam",
+        "Email": "shivam@gmail.com",
+        "Password": "Qwerty1234",
+        "Action": ""
+      },
+      {
+        "ID": "2",
+        "Name": "Aniket nigam",
+        "Email": "aniket@gamil.com",
+        "Password": "Qwerty1234",
+        "Action": ""
+      },
+      {
+        "ID": "3",
+        "Name": "Mohmmad ZaID",
+        "Email": "mohmmadzaID759@gmail.com",
+        "Password": "Qwerty1234",
+        "Action": ""
+      }
+    ],
+    "student": [
+      {
+        "StudentName": "Mohmmad ZaID",
+        "MobileNumber": "+919956135945",
+        "Email": "mohmmadzaID759@gmail.com",
+        "DateOfBirth": "2001-04-11",
+        "City": "Luckn",
+        "Address": "Luckn",
+        "ID": 1
+      },
+      {
+        "StudentName": "Mohmmad ZaID",
+        "MobileNumber": "+919956135945",
+        "Email": "mohmmadzaID759@gmail.com",
+        "DateOfBirth": "2001-04-11",
+        "City": "Luckn",
+        "Address": "Luckn",
+        "ID": 2
+      },
+      {
+        "StudentName": "Mohmmad ZaID",
+        "MobileNumber": "+919956135945",
+        "Email": "mohmmadzaID759@gmail.com",
+        "DateOfBirth": "2001-04-16",
+        "City": "Lucknow",
+        "Address": "Lucknow",
+        "CourseID": "B.tech",
+        "ID": 3
+      }
+    ],
+    "course": [
+      {
+        "ID": "1",
+        "CourseId": "2121212121222",
+        "CourseName": "Asd",
+        "CourseDescription": "asdsdasdsadsd",
+        "Action":""
+        
+      },
+      {
+        "ID": "2",
+        "CourseId": "2121212121222",
+        "CourseName": "Asd",
+        "CourseDescription": "asdsdasdsadsd",
+        "Action":""
+        
+      },
+      {
+        "ID": "3",
+        "CourseId": "2121212121222",
+        "CourseName": "Asd",
+        "CourseDescription": "asdsdasdsadsd",
+        "Action":""
+        
+      },
+      {
+        "ID": "4",
+        "CourseId": "2121212121222",
+        "CourseName": "Asd",
+        "CourseDescription": "asdsdasdsadsd",
+        "Action":""
+        
+      },
+      {
+        "ID": "5",
+        "CourseId": "2121212121222",
+        "CourseName": "Asd",
+        "CourseDescription": "asdsdasdsadsd",
+        "Action":""
+        
+      }
+    ]
+  }
