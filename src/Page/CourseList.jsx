@@ -11,12 +11,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import style from "./css/custom.module.css";
-
+import { FaTrash,FaEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export default function CoursesList() {
   const column = ["ID", "Course Name", "Course Id", "Description", "Action"];
   const dispatch = useDispatch();
   const records = useSelector(selectCourses);
-
+  const navigate=useNavigate();
   const handleRemove = async (e, id) => {
     e.preventDefault();
     console.log(id);
@@ -28,7 +29,6 @@ export default function CoursesList() {
       }
     );
     dispatch(fetchCoursesAsync());
-    console.log("removed");
     toast.success("Deleted successfully", {
       className: style.customtoastsuccess,
       position: "top-center",
@@ -71,12 +71,12 @@ export default function CoursesList() {
                           <td>{record.courseId}</td>
                           <td>{record.courseDetail}</td>
                           <td>
-                            <button className="btn1">Update</button>
+                            <button className="btn1" onClick={()=>{navigate(`/CourseEdit/${record.id}`)}}><FaEdit></FaEdit></button>
                             <button
                               className="btn2"
                               onClick={(e) => handleRemove(e, record.id)}
                             >
-                              Remove
+                              <FaTrash></FaTrash>
                             </button>
                           </td>
                         </tr>

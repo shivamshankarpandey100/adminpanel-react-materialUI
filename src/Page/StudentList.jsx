@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import "./css/List.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStudentsAsync, selectStudents } from '../features/student/studentSlice';
-
+import { FaTrash,FaEdit } from "react-icons/fa";
 export default function StudentList() {
  const column=["ID","Full Name","Mobile No:","Email","Course Id","Action"]
   const dispatch =useDispatch()
@@ -33,14 +33,14 @@ export default function StudentList() {
                 {records.map((record, i) => (
                    record.status===true &&
                  ( <tr key={i}>
-                    <td>{record.id}</td>
+                    <td>{i+1}</td>
                     <td>{record.studentName}</td>
                     <td>{record.mobileNumber}</td>
                     <td>{record.email}</td>
                     <td>{record.courseId}</td>
                     <td>
-                      <button className='btn1'>Update</button>
-                      <button className='btn2'>Remove</button>
+                      <button className='btn1'><FaEdit></FaEdit></button>
+                      <button className='btn2'><FaTrash></FaTrash></button>
                     </td>
                   </tr>)
                 ))}

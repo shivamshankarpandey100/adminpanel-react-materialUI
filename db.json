@@ -27,77 +27,57 @@
   ],
   "student": [
     {
-      "StudentName": "Mohmmad ZaID",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaID759@gmail.com",
-      "DateOfBirth": "2001-04-11",
-      "City": "Luckn",
-      "Address": "Luckn",
-      "ID": 1,
-      "status": true
+      "studentName": "John Doe",
+      "dateOfBirth": "01/15/1995",
+      "email": "johndoe@example.com",
+      "mobileNumber": "123-456-7890",
+      "address": "123 Main Street",
+      "city": "Anytown",
+      "courseId": "CS101",
+      "status": true,
+      "id": 1
     },
     {
-      "StudentName": "Mohmmad ZaID",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaID759@gmail.com",
-      "DateOfBirth": "2001-04-11",
-      "City": "Luckn",
-      "Address": "Luckn",
-      "ID": 2,
-      "status": true
+      "studentName": "Jane Smith",
+      "dateOfBirth": "05/20/1998",
+      "email": "janesmith@example.com",
+      "mobileNumber": "987-654-3210",
+      "address": "456 Elm Street",
+      "city": "Someville",
+      "courseId": "ENG201",
+      "status": true,
+      "id": 2
     },
     {
-      "StudentName": "Mohmmad ZaID",
-      "MobileNumber": "+919956135945",
-      "Email": "mohmmadzaID759@gmail.com",
-      "DateOfBirth": "2001-04-16",
-      "City": "Lucknow",
-      "Address": "Lucknow",
-      "CourseID": "B.tech",
-      "ID": 3,
-      "status": true
+      "studentName": "Bob Johnson",
+      "dateOfBirth": "12/03/2000",
+      "email": "bob@example.com",
+      "mobileNumber": "555-123-7890",
+      "address": "789 Oak Avenue",
+      "city": "Othercity",
+      "courseId": "MATH301",
+      "status": true,
+      "id": 3
     }
   ],
   "course": [
     {
-      "ID": "1",
-      "CourseId": "2121212121222",
-      "CourseName": "Asd",
-      "CourseDescription": "asdsdasdsadsd",
-      "Action": "",
-      "status": true
+      "courseName": "Introduction to Computer Science",
+      "courseId": "105",
+      "courseDetail": "This course provides an introduction to the fundamentals of computer science.",
+      "id": 1
     },
     {
-      "ID": "2",
-      "CourseId": "2121212121222",
-      "CourseName": "Asd",
-      "CourseDescription": "asdsdasdsadsd",
-      "Action": "",
-      "status": true
+      "courseName": "English Literature",
+      "courseId": "2011",
+      "courseDetail": "Explore the world of literature and enhance your language skills.",
+      "id": 2
     },
     {
-      "ID": "3",
-      "CourseId": "2121212121222",
-      "CourseName": "Asd",
-      "CourseDescription": "asdsdasdsadsd",
-      "Action": "",
-      "status": true
-    },
-    {
-      "ID": "4",
-      "CourseId": "2121212121222",
-      "CourseName": "Asd",
-      "CourseDescription": "asdsdasdsadsd",
-      "Action": "",
-      "status": true
-    },
-    {
-      "ID": "5",
-      "CourseId": "2121212121222",
-      "CourseName": "Asd",
-      "CourseDescription": "asdsdasdsadsd",
-      "Action": "",
-      "status": true
+      "courseName": "Advanced Mathematics",
+      "courseId": "3010",
+      "courseDetail": "Dive into the world of advanced mathematics and problem-solving.",
+      "id": 3
     }
   ]
 }

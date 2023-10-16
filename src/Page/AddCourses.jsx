@@ -147,7 +147,7 @@ export default function AddCourses() {
                     type="number"
                     className="input"
                     id="CourseId"
-                    minLength={5}
+                    minLength={3}
                     maxLength={10}
                     {...register("CourseId", {
                       required: "CourseId  is required",

@@ -1,23 +1,23 @@
-import React from 'react'
-import {Routes,Route,BrowserRouter} from "react-router-dom"
-import Dashboard from './Page/Dashboard'
-import AddStudent from './Page/AddStudent'
-import User from './Page/User'
-import StudentList from './Page/StudentList'
-import AddCourses from './Page/AddCourses'
-import CoursesList from './Page/CourseList'
-import UserList from './Page/UserList'
-import Logout from './Page/Logout'
-import LoginPage from './Page/LoginPage'
-import SignUpPage from './Page/SignUpPage'
-import Protected from './Page/Protected'
-
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Dashboard from "./Page/Dashboard";
+import AddStudent from "./Page/AddStudent";
+import User from "./Page/User";
+import StudentList from "./Page/StudentList";
+import AddCourses from "./Page/AddCourses";
+import CoursesList from "./Page/CourseList";
+import UserList from "./Page/UserList";
+import Logout from "./Page/Logout";
+import LoginPage from "./Page/LoginPage";
+import SignUpPage from "./Page/SignUpPage";
+import Protected from "./Page/Protected";
+import CourseListEdit from "./Page/CourseListEdit";
 export default function App() {
   return (
- <>
-  <BrowserRouter>
-    <Routes>
-        <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
+    <>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
         <Route path='/User' element={ <Protected> <User /></Protected> }></Route>
         <Route path='/AddStudent' element={<Protected> <AddStudent /></Protected> }></Route>
         <Route path='/StudentList' element={<Protected> <StudentList /></Protected>}></Route>
@@ -27,18 +27,21 @@ export default function App() {
         <Route path='/Logout' element={<Logout />}></Route>
         <Route path='/Login' element={<LoginPage />}></Route>
         <Route path='/Signup' element={<SignUpPage />}></Route>
-            {/* <Route path='/' element={  <Dashboard />}></Route>
-        <Route path='/User' element={  <User /> }></Route>
-        <Route path='/AddStudent' element={ <AddStudent /> }></Route>
-        <Route path='/StudentList' element={ <StudentList />}></Route>
-        <Route path='/AddCourses' element={<AddCourses />}></Route>
-        <Route path='/CourseList' element={<CoursesList />}></Route>
-        <Route path='/UserList' element={<UserList />}></Route>
-        <Route path='/Logout' element={<Logout />}></Route>
-        <Route path='/Login' element={<LoginPage />}></Route>
-        <Route path='/Signup' element={<SignUpPage />}></Route> */}
-    </Routes>
-  </BrowserRouter>
- </>
-  )
+         <Route path='/CourseEdit/:id' element={<Protected><CourseListEdit/></Protected>}></Route> */}
+
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/User" element={<User />}></Route>
+          <Route path="/AddStudent" element={<AddStudent />}></Route>
+          <Route path="/StudentList" element={<StudentList />}></Route>
+          <Route path="/AddCourses" element={<AddCourses />}></Route>
+          <Route path="/CourseList" element={<CoursesList />}></Route>
+          <Route path="/UserList" element={<UserList />}></Route>
+          <Route path="/Logout" element={<Logout />}></Route>
+          <Route path="/Login" element={<LoginPage />}></Route>
+          <Route path="/Signup" element={<SignUpPage />}></Route>
+          <Route path="/CourseEdit/:id" element={<CourseListEdit />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
