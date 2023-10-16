@@ -1,7 +1,4 @@
 
-  
-  
-  
   {
     "users": [
       {
@@ -9,21 +6,24 @@
         "Name": "Shivam",
         "Email": "shivam@gmail.com",
         "Password": "Qwerty1234",
-        "Action": ""
+        "Action": "",
+        "status":1
       },
       {
         "ID": "2",
         "Name": "Aniket nigam",
         "Email": "aniket@gamil.com",
         "Password": "Qwerty1234",
-        "Action": ""
+        "Action": "",
+        "status":1
       },
       {
         "ID": "3",
         "Name": "Mohmmad ZaID",
         "Email": "mohmmadzaID759@gmail.com",
         "Password": "Qwerty1234",
-        "Action": ""
+        "Action": "",
+        "status":1
       }
     ],
     "student": [
@@ -34,7 +34,8 @@
         "DateOfBirth": "2001-04-11",
         "City": "Luckn",
         "Address": "Luckn",
-        "ID": 1
+        "ID": 1,
+        "status":1
       },
       {
         "StudentName": "Mohmmad ZaID",
@@ -43,7 +44,8 @@
         "DateOfBirth": "2001-04-11",
         "City": "Luckn",
         "Address": "Luckn",
-        "ID": 2
+        "ID": 2,
+        "status":1
       },
       {
         "StudentName": "Mohmmad ZaID",
@@ -53,7 +55,8 @@
         "City": "Lucknow",
         "Address": "Lucknow",
         "CourseID": "B.tech",
-        "ID": 3
+        "ID": 3,
+        "status":1
       }
     ],
     "course": [
@@ -62,40 +65,40 @@
         "CourseId": "2121212121222",
         "CourseName": "Asd",
         "CourseDescription": "asdsdasdsadsd",
-        "Action":""
-        
+        "Action":"",
+        "status":1
       },
       {
         "ID": "2",
         "CourseId": "2121212121222",
         "CourseName": "Asd",
         "CourseDescription": "asdsdasdsadsd",
-        "Action":""
-        
+        "Action":"",
+        "status":1
       },
       {
         "ID": "3",
         "CourseId": "2121212121222",
         "CourseName": "Asd",
         "CourseDescription": "asdsdasdsadsd",
-        "Action":""
-        
+        "Action":"",
+        "status":1
       },
       {
         "ID": "4",
         "CourseId": "2121212121222",
         "CourseName": "Asd",
         "CourseDescription": "asdsdasdsadsd",
-        "Action":""
-        
+        "Action":"",
+        "status":1
       },
       {
         "ID": "5",
         "CourseId": "2121212121222",
         "CourseName": "Asd",
         "CourseDescription": "asdsdasdsadsd",
-        "Action":""
-        
+        "Action":"",
+        "status":1
       }
     ]
   }

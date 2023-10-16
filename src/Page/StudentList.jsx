@@ -3,19 +3,17 @@ import SideBar from '../Component/SideBar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import "./css/List.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchStudentsAsync, selectStudents } from '../features/student/studentSlice';
 
 export default function StudentList() {
-  const [column, setColumn] = useState([]);
-  const [records, setRecords] = useState([]);
-
+ const column=["ID","Full Name","Mobile No:","Email","Course","Action"]
+  const dispatch =useDispatch()
+  const records=useSelector(selectStudents);
+  console.log(records)
   useEffect(() => {
-    fetch('http://localhost:3001/db')
-      .then((res) => res.json())
-      .then((data) => {
-        setColumn(Object.keys(data.users[0]));
-        setRecords(data.users);
-      });
-  }, []);
+    dispatch(fetchStudentsAsync())
+  }, [dispatch]);
   return (
     <Box sx={{ display: 'flex' }}>
       <SideBar />
@@ -35,9 +33,10 @@ export default function StudentList() {
                 {records.map((record, i) => (
                   <tr key={i}>
                     <td>{record.ID}</td>
-                    <td>{record.Name}</td>
-                    <td>{record.Email}</td>
-                    <td>{record.Password}</td>
+                    <td>{record.studentName}</td>
+                    <td>{record.mobileNumber}</td>
+                    <td>{record.email}</td>
+                    <td>{record.courseId}</td>
                     <td>
                       <button className='btn1'>Update</button>
                       <button className='btn2'>Remove</button>

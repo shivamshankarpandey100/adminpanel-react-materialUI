@@ -5,18 +5,17 @@ import SideBar from '../Component/SideBar'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import "./css/List.css"
+import { fetchCoursesAsync, selectCourses } from '../features/course/courseSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function CoursesList() {
-  const [column, setColumn] = useState([]);
-  const [records, setRecords] = useState([]);
+  const column=["ID","Course Name","Course Id","Description","Action"]
+  const dispatch =useDispatch()
+  const records=useSelector(selectCourses);
+  console.log(records)
   useEffect(() => {
-    fetch('http://localhost:3001/db')
-      .then((res) => res.json())
-      .then((data) => {
-        setColumn(Object.keys(data.course[0]));
-        setRecords(data.course);
-      });
-  }, []);
+    dispatch(fetchCoursesAsync())
+  }, [dispatch]);
   return (
     <Box sx={{display:'flex'}}>
       <SideBar />
