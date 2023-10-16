@@ -30,7 +30,7 @@ export default function CoursesList() {
     dispatch(fetchCoursesAsync());
     console.log("removed");
     toast.success("Deleted successfully", {
-      className: style.custom - toast - success,
+      className: style.customtoastsuccess,
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
