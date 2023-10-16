@@ -1,4 +1,4 @@
-
+// http://localhost:8082/course/allcourses
 export function fetchCourses(){
   return new Promise(async (resolve) =>{
    

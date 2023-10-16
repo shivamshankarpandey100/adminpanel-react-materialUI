@@ -1,104 +1,103 @@
-
-  {
-    "users": [
-      {
-        "ID": "1",
-        "Name": "Shivam",
-        "Email": "shivam@gmail.com",
-        "Password": "Qwerty1234",
-        "Action": "",
-        "status":1
-      },
-      {
-        "ID": "2",
-        "Name": "Aniket nigam",
-        "Email": "aniket@gamil.com",
-        "Password": "Qwerty1234",
-        "Action": "",
-        "status":1
-      },
-      {
-        "ID": "3",
-        "Name": "Mohmmad ZaID",
-        "Email": "mohmmadzaID759@gmail.com",
-        "Password": "Qwerty1234",
-        "Action": "",
-        "status":1
-      }
-    ],
-    "student": [
-      {
-        "StudentName": "Mohmmad ZaID",
-        "MobileNumber": "+919956135945",
-        "Email": "mohmmadzaID759@gmail.com",
-        "DateOfBirth": "2001-04-11",
-        "City": "Luckn",
-        "Address": "Luckn",
-        "ID": 1,
-        "status":1
-      },
-      {
-        "StudentName": "Mohmmad ZaID",
-        "MobileNumber": "+919956135945",
-        "Email": "mohmmadzaID759@gmail.com",
-        "DateOfBirth": "2001-04-11",
-        "City": "Luckn",
-        "Address": "Luckn",
-        "ID": 2,
-        "status":1
-      },
-      {
-        "StudentName": "Mohmmad ZaID",
-        "MobileNumber": "+919956135945",
-        "Email": "mohmmadzaID759@gmail.com",
-        "DateOfBirth": "2001-04-16",
-        "City": "Lucknow",
-        "Address": "Lucknow",
-        "CourseID": "B.tech",
-        "ID": 3,
-        "status":1
-      }
-    ],
-    "course": [
-      {
-        "ID": "1",
-        "CourseId": "2121212121222",
-        "CourseName": "Asd",
-        "CourseDescription": "asdsdasdsadsd",
-        "Action":"",
-        "status":1
-      },
-      {
-        "ID": "2",
-        "CourseId": "2121212121222",
-        "CourseName": "Asd",
-        "CourseDescription": "asdsdasdsadsd",
-        "Action":"",
-        "status":1
-      },
-      {
-        "ID": "3",
-        "CourseId": "2121212121222",
-        "CourseName": "Asd",
-        "CourseDescription": "asdsdasdsadsd",
-        "Action":"",
-        "status":1
-      },
-      {
-        "ID": "4",
-        "CourseId": "2121212121222",
-        "CourseName": "Asd",
-        "CourseDescription": "asdsdasdsadsd",
-        "Action":"",
-        "status":1
-      },
-      {
-        "ID": "5",
-        "CourseId": "2121212121222",
-        "CourseName": "Asd",
-        "CourseDescription": "asdsdasdsadsd",
-        "Action":"",
-        "status":1
-      }
-    ]
-  }
+{
+  "users": [
+    {
+      "ID": "1",
+      "Name": "Shivam",
+      "Email": "shivam@gmail.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "2",
+      "Name": "Aniket nigam",
+      "Email": "aniket@gamil.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "3",
+      "Name": "Mohmmad ZaID",
+      "Email": "mohmmadzaID759@gmail.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    }
+  ],
+  "student": [
+    {
+      "StudentName": "Mohmmad ZaID",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaID759@gmail.com",
+      "DateOfBirth": "2001-04-11",
+      "City": "Luckn",
+      "Address": "Luckn",
+      "ID": 1,
+      "status": true
+    },
+    {
+      "StudentName": "Mohmmad ZaID",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaID759@gmail.com",
+      "DateOfBirth": "2001-04-11",
+      "City": "Luckn",
+      "Address": "Luckn",
+      "ID": 2,
+      "status": true
+    },
+    {
+      "StudentName": "Mohmmad ZaID",
+      "MobileNumber": "+919956135945",
+      "Email": "mohmmadzaID759@gmail.com",
+      "DateOfBirth": "2001-04-16",
+      "City": "Lucknow",
+      "Address": "Lucknow",
+      "CourseID": "B.tech",
+      "ID": 3,
+      "status": true
+    }
+  ],
+  "course": [
+    {
+      "ID": "1",
+      "CourseId": "2121212121222",
+      "CourseName": "Asd",
+      "CourseDescription": "asdsdasdsadsd",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "2",
+      "CourseId": "2121212121222",
+      "CourseName": "Asd",
+      "CourseDescription": "asdsdasdsadsd",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "3",
+      "CourseId": "2121212121222",
+      "CourseName": "Asd",
+      "CourseDescription": "asdsdasdsadsd",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "4",
+      "CourseId": "2121212121222",
+      "CourseName": "Asd",
+      "CourseDescription": "asdsdasdsadsd",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "5",
+      "CourseId": "2121212121222",
+      "CourseName": "Asd",
+      "CourseDescription": "asdsdasdsadsd",
+      "Action": "",
+      "status": true
+    }
+  ]
+}
