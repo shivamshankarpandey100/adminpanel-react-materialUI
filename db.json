@@ -27,36 +27,23 @@
   ],
   "student": [
     {
-      "studentName": "John Doe",
-      "dateOfBirth": "01/15/1995",
-      "email": "johndoe@example.com",
-      "mobileNumber": "123-456-7890",
-      "address": "123 Main Street",
-      "city": "Anytown",
-      "courseId": "CS101",
-      "status": true,
-      "id": 1
-    },
-    {
-      "studentName": "Jane Smith",
-      "dateOfBirth": "05/20/1998",
-      "email": "janesmith@example.com",
-      "mobileNumber": "987-654-3210",
-      "address": "456 Elm Street",
-      "city": "Someville",
-      "courseId": "ENG201",
-      "status": true,
+      "studentName": "Mohammad Zaid",
+      "mobileNumber": "09876543210",
+      "email": "mohmmadzaid759@gmail.com",
+      "dateOfBirth": "1998-02-20",
+      "city": "Lucknow",
+      "address": "500/15 Qutubpur,Daliganj",
+      "CourseId": "105",
       "id": 2
     },
     {
-      "studentName": "Bob Johnson",
-      "dateOfBirth": "12/03/2000",
+      "studentName": "Boris Johnson",
+      "mobileNumber": 5551237890,
       "email": "bob@example.com",
-      "mobileNumber": "555-123-7890",
-      "address": "789 Oak Avenue",
+      "dateOfBirth": "2001-06-15",
       "city": "Othercity",
-      "courseId": "MATH301",
-      "status": true,
+      "address": "789 Oak Avenue",
+      "CourseId": "105",
       "id": 3
     }
   ],
@@ -65,18 +52,27 @@
       "courseName": "Introduction to Computer Science",
       "courseId": "105",
       "courseDetail": "This course provides an introduction to the fundamentals of computer science.",
-      "id": 1
+      "id": 1,
+      "status": true
     },
     {
-      "courseName": "English Literature",
-      "courseId": "2011",
-      "courseDetail": "Explore the world of literature and enhance your language skills.",
+      "studentName": "Mohammad Zaid",
+      "mobileNumber": "09876543210",
+      "email": "mohmmadzaid759@gmail.com",
+      "dateOfBirth": "1998-02-16",
+      "city": "Lucknow",
+      "address": "Lucknow",
+      "CourseId": "3010",
       "id": 2
     },
     {
-      "courseName": "Advanced Mathematics",
-      "courseId": "3010",
-      "courseDetail": "Dive into the world of advanced mathematics and problem-solving.",
+      "studentName": "Boris Mehta",
+      "mobileNumber": "5551237890",
+      "email": "bobs@example.com",
+      "dateOfBirth": "2002-06-15",
+      "city": "Othercity",
+      "address": "789 Oak Avenue",
+      "CourseId": "3010",
       "id": 3
     }
   ]

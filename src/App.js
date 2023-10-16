@@ -12,6 +12,7 @@ import LoginPage from "./Page/LoginPage";
 import SignUpPage from "./Page/SignUpPage";
 import Protected from "./Page/Protected";
 import CourseListEdit from "./Page/CourseListEdit";
+import StudentListEdit from "./Page/StudentListEdit";
 export default function App() {
   return (
     <>
@@ -27,7 +28,8 @@ export default function App() {
         <Route path='/Logout' element={<Logout />}></Route>
         <Route path='/Login' element={<LoginPage />}></Route>
         <Route path='/Signup' element={<SignUpPage />}></Route>
-         <Route path='/CourseEdit/:id' element={<Protected><CourseListEdit/></Protected>}></Route> */}
+        <Route path='/CourseEdit/:id' element={<Protected><CourseListEdit/></Protected>}></Route>
+        <Route path="/StudentEdit/:id" element={<Protected><StudentListEdit/></Protected>}></Route> */}
 
           <Route path="/" element={<Dashboard />}></Route>
           <Route path="/User" element={<User />}></Route>
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="/Signup" element={<SignUpPage />}></Route>
           <Route path="/CourseEdit/:id" element={<CourseListEdit />}></Route>
+          <Route path="/StudentEdit/:id" element={<StudentListEdit/>}></Route>
+       
         </Routes>
       </BrowserRouter>
     </>
