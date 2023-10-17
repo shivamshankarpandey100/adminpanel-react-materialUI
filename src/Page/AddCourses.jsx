@@ -16,7 +16,7 @@ export default function AddCourses() {
   } = useForm();
 
   async function insertData(courseData) {
-    try {
+   
       let data3 = {
         courseName: courseData.CourseName,
         courseId: courseData.CourseId,
@@ -45,7 +45,7 @@ export default function AddCourses() {
           });
           throw new Error("Internal Server error");
         } else {
-          toast.error(message, {
+          toast.error("Course with given Course ID already Exist", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -61,16 +61,14 @@ export default function AddCourses() {
 
       const data = await response.json();
       return data;
-    } catch (error) {
-      console.log(error);
-      setError(error);
-    }
+    
   }
 
   async function handleButtonClick(courseData) {
     setError(null); // Clear any previous errors
     try {
       const data = await insertData(courseData);
+      console.log(data);
       if (data) {
         toast.success("Course Created Successfully", {
           position: "top-center",

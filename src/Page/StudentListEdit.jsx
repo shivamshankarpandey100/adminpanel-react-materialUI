@@ -16,6 +16,7 @@ import {
   selectStudentById,
   updateStudentByIdAsync,
 } from "../features/student/studentSlice";
+import { useNavigate } from "react-router-dom"; 
 
 const StudentListEdit = () => {
   const {
@@ -25,6 +26,7 @@ const StudentListEdit = () => {
     formState: { errors },
   } = useForm();
   const params = useParams();
+  const navigate = useNavigate();
   const courseList = useSelector(selectCourses);
   const dispatch = useDispatch();
   const selectedStudent = useSelector(selectStudentById);
@@ -45,7 +47,7 @@ const StudentListEdit = () => {
       //   console.log(selectedStudent.dateOfBirth)
       setValue("city", selectedStudent.city);
       setValue("address", selectedStudent.address);
-    //   setValue("courseId", selectedStudent.courseId);
+      setValue("courseId", selectedStudent.courseId);
       console.log(selectedStudent.courseId)
     }
   }, [selectedStudent, params.id, setValue]);
@@ -241,8 +243,8 @@ const StudentListEdit = () => {
                 </div>
 
                 <div className="button-container">
-                  <button type="reset" className="reset" value="Reset">
-                    Reset
+                  <button type="reset" className="reset" value="Reset"  onClick={()=>{navigate(`/StudentList`)}}>
+                    Cancel
                   </button>
 
                   <button type="submit" className="submit-2 " value="Submit">

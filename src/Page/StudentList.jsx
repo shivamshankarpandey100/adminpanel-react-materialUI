@@ -19,7 +19,7 @@ export default function StudentList() {
     e.preventDefault();
     console.log(id);
     const response = await fetch(
-      "http://localhost:8082/student/" + id,
+      "http://localhost:8082/student/deletestudent/" + id,
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },
