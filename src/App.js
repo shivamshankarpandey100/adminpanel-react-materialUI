@@ -7,7 +7,7 @@ import StudentList from "./Page/StudentList";
 import AddCourses from "./Page/AddCourses";
 import CoursesList from "./Page/CourseList";
 import UserList from "./Page/UserList";
-import Logout from "./Page/Logout";
+
 import LoginPage from "./Page/LoginPage";
 import SignUpPage from "./Page/SignUpPage";
 import Protected from "./Page/Protected";
@@ -25,9 +25,10 @@ export default function App() {
         <Route path='/AddCourses' element={<Protected><AddCourses /></Protected>}></Route>
         <Route path='/CourseList' element={<Protected><CoursesList /></Protected>}></Route>
         <Route path='/UserList' element={<Protected><UserList /></Protected>}></Route>
-        <Route path='/Logout' element={<Logout />}></Route>
         <Route path='/Login' element={<LoginPage />}></Route>
         <Route path='/Signup' element={<SignUpPage />}></Route>
+        <Route path='/Protected' element={<Protected />}></Route>
+
         <Route path='/CourseEdit/:id' element={<Protected><CourseListEdit/></Protected>}></Route>
         <Route path="/StudentEdit/:id" element={<Protected><StudentListEdit/></Protected>}></Route>
 {/* 

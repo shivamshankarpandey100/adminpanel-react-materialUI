@@ -110,6 +110,7 @@ export default function SideBar() {
   const handleLogout=(e)=>{
     e.preventDefault();
       dispatch(signOutAsync());
+      navigate('/login')
       
  }
   return (

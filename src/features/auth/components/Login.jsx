@@ -32,16 +32,7 @@ export default function Login() {
             dispatch(
               checkUserAsync({ email: data.email, password: data.password })
             );
-            toast.success('Login Sucessfully', {
-              position: "top-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-              });
+        
           })}
         >
           <p className="form-title">Login to your account</p>
