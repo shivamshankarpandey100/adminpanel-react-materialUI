@@ -42,7 +42,6 @@ const CourseListEdit = () => {
               className="form"
               onSubmit={handleSubmit((data) => {
                 let id=params.id
-                console.log(data)
                  dispatch(updateCourseByIdAsync({data,id}));
                  toast.success("Course Updated Successfully", {
                   position: "top-center",

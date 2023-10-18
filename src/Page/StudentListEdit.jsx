@@ -44,11 +44,9 @@ const StudentListEdit = () => {
       setValue("mobileNumber", selectedStudent.mobileNumber);
       setValue("email", selectedStudent.email);
       setValue("dateOfBirth", selectedStudent.dateOfBirth);
-      //   console.log(selectedStudent.dateOfBirth)
       setValue("city", selectedStudent.city);
       setValue("address", selectedStudent.address);
       setValue("courseId", selectedStudent.courseId);
-      console.log(selectedStudent.courseId)
     }
   }, [selectedStudent, params.id, setValue]);
 
@@ -63,7 +61,6 @@ const StudentListEdit = () => {
                 className="form"
                 onSubmit={handleSubmit((data) => {
                   let id = params.id;
-                  console.log(data);
                   dispatch(updateStudentByIdAsync({data,id}))
                   toast.success("Student Record Updated Successfully", {
                     position: "top-center",

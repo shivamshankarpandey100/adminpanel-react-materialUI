@@ -11,7 +11,6 @@ import { selectLoggedInUser } from '../features/auth/authSlice';
 
 export default function User() {
   const user=   JSON.parse(window.localStorage.getItem("userDetails"));
-  console.log(user);
   return (
         <Box sx={{display:'flex'}}>
           <SideBar />

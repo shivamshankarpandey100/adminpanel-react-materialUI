@@ -15,7 +15,7 @@ export default function AddStudent() {
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
   const courseList = useSelector(selectCourses);
-  console.log(courseList);
+
   useEffect(() => {
     dispatch(fetchCoursesAsync());
   }, [dispatch]);
@@ -38,7 +38,7 @@ export default function AddStudent() {
         city: studentData.City,
         courseId: studentData.CourseId,
       };
-      console.log(data2);
+
       const response = await fetch(
         "http://localhost:8082/student/savestudent",
         {
@@ -50,7 +50,7 @@ export default function AddStudent() {
 
       if (!response.ok) {
         let message = response.statusText;
-        console.log(message);
+
         if (message === "Not Found") {
           toast.error("Ineternal server Error", {
             position: "top-center",
@@ -79,10 +79,10 @@ export default function AddStudent() {
       }
 
       const data = await response.json();
-      console.log(data);
+  
       return data;
     } catch (error) {
-      console.log(error);
+   
       setError(error);
     }
   }
@@ -110,7 +110,7 @@ export default function AddStudent() {
         setValue("CourseId", "");
       }
     } catch (error) {
-      console.log(error);
+    
       toast(error, {
         position: "top-center",
         autoClose: 5000,

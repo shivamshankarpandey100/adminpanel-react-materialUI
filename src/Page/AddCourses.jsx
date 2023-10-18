@@ -22,7 +22,7 @@ export default function AddCourses() {
         courseId: courseData.CourseId,
         courseDetail: courseData.CourseDescription,
       };      
-      console.log(courseData);
+
       const response = await fetch("http://localhost:8082/course/savecourse", {
         method: "POST",
         body: JSON.stringify(data3),
@@ -31,7 +31,7 @@ export default function AddCourses() {
 
       if (!response.ok) {
         let message = response.statusText;
-        console.log(message);
+     
         if (message === "Not Found") {
           toast.error("Ineternal server Error", {
             position: "top-center",
@@ -68,7 +68,7 @@ export default function AddCourses() {
     setError(null); // Clear any previous errors
     try {
       const data = await insertData(courseData);
-      console.log(data);
+   
       if (data) {
         toast.success("Course Created Successfully", {
           position: "top-center",
@@ -86,7 +86,7 @@ export default function AddCourses() {
         
       }
     } catch (error) {
-      console.log(error);
+   
       toast(error, {
         position: "top-center",
         autoClose: 5000,
@@ -132,10 +132,7 @@ export default function AddCourses() {
                 {errors.CourseName && (
                   <p className="text-red-400">{errors.CourseName.message}</p>
                 )}
-                {/* <label>
-                 <input required="" placeholder="" type="text" className="input" />
-                   <span>Lastname</span>
-                         </label> */}
+           
               </div>
               <div>
                 <label>
@@ -155,7 +152,7 @@ export default function AddCourses() {
                       },
                     })}
                   />
-                  {/* <span></span> */}
+               
                 </label>
                 {errors.CourseId && (
                   <p className="text-red-400">{errors.CourseId.message}</p>
@@ -185,7 +182,7 @@ export default function AddCourses() {
                       required: "Course Description is required",
                     })}
                   />
-                  {/* <span></span> */}
+         
                 </label>
                 {errors.CourseDescription && (
                   <p className="text-red-400">{errors.CourseDescription.message}</p>

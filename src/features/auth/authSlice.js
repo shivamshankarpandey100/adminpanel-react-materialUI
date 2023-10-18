@@ -16,22 +16,13 @@ export const createUserAsync = createAsyncThunk(
       return response.data;
       
     } catch (error) {
-      console.log(error);
+     
       return rejectWithValue(error);
     }
   
   }
 );
-//This is for me for testing purpose
 
-// export const checkUserAsync = createAsyncThunk(
-//   "user/checkUser",
-//   async (loginInfo) => {
-//     const response = await checkUser(loginInfo);
-//     // The value we return becomes the `fulfilled` action payload
-//     return response.data;
-//   }
-// );
 
 
 export const checkUserAsync = createAsyncThunk(
@@ -40,11 +31,9 @@ export const checkUserAsync = createAsyncThunk(
     try {
       const response = await checkUser(loginInfo);
       // The value we return becomes the `fulfilled` action payload
-      console.log(response.data);
-
       return response.data;
     } catch (error) {
-      console.log(error);
+     
       return rejectWithValue(error);
     }
   }
@@ -79,7 +68,6 @@ export const authSlice = createSlice({
       })
       .addCase(checkUserAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        console.log(action.payload)
         window.localStorage.setItem("userDetails",JSON.stringify(action.payload) );
         state.loggedInUser = action.payload;
       })

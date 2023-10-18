@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css"
 export default function UserList() {
  const column=["ID","User Name","Email"];
  const[records,setRecords]=useState([]);
- console.log(records);
   const fetchUser = async () => {
     const response = await fetch('http://localhost:8082/user/allusers');
     const data = await response.json();

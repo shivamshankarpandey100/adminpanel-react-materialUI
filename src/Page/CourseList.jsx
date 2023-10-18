@@ -11,16 +11,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import style from "./css/custom.module.css";
-import { FaTrash,FaEdit } from "react-icons/fa";
+import { FaTrash, FaEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 export default function CoursesList() {
   const column = ["ID", "Course Name", "Course Id", "Description", "Action"];
   const dispatch = useDispatch();
   const records = useSelector(selectCourses);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleRemove = async (e, id) => {
     e.preventDefault();
-    console.log(id);
+
     const response = await fetch(
       "http://localhost:8082/course/deletecourse/" + id,
       {
@@ -40,7 +40,7 @@ export default function CoursesList() {
       progress: undefined,
     });
   };
-  console.log(records);
+
   useEffect(() => {
     dispatch(fetchCoursesAsync());
   }, [dispatch]);
@@ -71,7 +71,14 @@ export default function CoursesList() {
                           <td>{record.courseId}</td>
                           <td>{record.courseDetail}</td>
                           <td>
-                            <button className="btn1" onClick={()=>{navigate(`/CourseEdit/${record.id}`)}}><FaEdit></FaEdit></button>
+                            <button
+                              className="btn1"
+                              onClick={() => {
+                                navigate(`/CourseEdit/${record.id}`);
+                              }}
+                            >
+                              <FaEdit></FaEdit>
+                            </button>
                             <button
                               className="btn2"
                               onClick={(e) => handleRemove(e, record.id)}

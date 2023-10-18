@@ -1,9 +1,9 @@
 
-//signup user route
+
 // http://localhost:8082/user/saveuser
 export function createUser(userData) {
   return new Promise(async (resolve,reject) => {
-    console.log(userData)
+
     try {
       const response = await fetch('http://localhost:8082/user/saveuser', {
         method: 'POST',
@@ -12,7 +12,7 @@ export function createUser(userData) {
       });
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
+      
         window.localStorage.setItem("isLoggedIn", true)
         resolve({ data });
       } else {
@@ -26,26 +26,10 @@ export function createUser(userData) {
 
   });
 }
-//Login userRoute
+
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
 
-    // const email = loginInfo.email;
-    // const password = loginInfo.password;
-    // const response = await fetch('http://localhost:8080/users?email=' + email);
-    // const data = await response.json();
-    // console.log({ data });
-    // if (data.length) {
-    //   if (password === data[0].password) {
-    //     window.localStorage.setItem("isLoggedIn",true)
-    //     resolve({ data: data[0] });
-    //   } else {
-    //     reject({ message: 'wrong credentials' });
-    //   }
-    // } else {
-    //   reject({ message: 'user not found' });
-    // }
-    // // TODO: on server it will only return some info of user (not password)
 
     try {
       const response = await fetch("http://localhost:8082/login/userlogin", {
@@ -59,7 +43,7 @@ export function checkUser(loginInfo) {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
+      
         window.localStorage.setItem("isLoggedIn", true)
         resolve({ data });
       } else {

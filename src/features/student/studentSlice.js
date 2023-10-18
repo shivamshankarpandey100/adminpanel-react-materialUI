@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
+  fetchStudentByEmail,
   fetchStudentById,
   fetchStudents,
   updateStudentById,
@@ -16,7 +17,7 @@ export const fetchStudentsAsync = createAsyncThunk(
   "student/fetchStudentList",
   async () => {
     const response = await fetchStudents();
-    console.log(response);
+
     return response.data;
   }
 );
@@ -31,9 +32,15 @@ export const fetchStudentByIdAsync = createAsyncThunk(
 export const updateStudentByIdAsync = createAsyncThunk(
   "student/updateStudentById",
   async ({ data, id }) => {
-    console.log(data);
     const response = await updateStudentById(data, id);
-    console.log(response);
+
+    return response.data;
+  }
+);
+export const fetchStudentByEmailAsync = createAsyncThunk(
+  "student/fetchStudentByEmail",
+  async (id) => {
+    const response = await fetchStudentByEmail(id);
     return response.data;
   }
 );
@@ -65,6 +72,13 @@ export const studentSlice = createSlice({
       .addCase(updateStudentByIdAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.selectstudent = action.payload;
+      })
+      .addCase(fetchStudentByEmailAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchStudentByEmailAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.students = action.payload;
       });
   },
 });

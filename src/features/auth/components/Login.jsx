@@ -3,7 +3,6 @@ import { selectError, selectLoggedInUser } from '../authSlice';
 import { Link, Navigate } from 'react-router-dom';
 import { checkUserAsync } from '../authSlice';
 import { useForm } from 'react-hook-form';
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./css/signup.css"
 export default function Login() {
@@ -11,14 +10,14 @@ export default function Login() {
 
   const user = useSelector(selectLoggedInUser);
   const err=useSelector(selectError)
-  console.log(err);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
  
-  console.log(errors);
+
 
   return (
     <>
@@ -87,7 +86,6 @@ export default function Login() {
           </p>
         </form>
       </div>
-      <ToastContainer/>
     </>
   );
 }

@@ -18,17 +18,17 @@ export const fetchCoursesAsync = createAsyncThunk(
 export const fetchCourseByIdAsync = createAsyncThunk(
   "course/fetchCourseById",
   async (id) => {
-       const response = await fetchCourseById(id);
-      return response.data;
+    const response = await fetchCourseById(id);
+    return response.data;
   }
 );
 export const updateCourseByIdAsync = createAsyncThunk(
   "course/updateCourseById",
-  async ({data,id}) => {
-    console.log(data)
-       const response = await updateCourseById(data,id);
-     console.log(response);
-      return response.data;
+  async ({ data, id }) => {
+   
+    const response = await updateCourseById(data, id);
+
+    return response.data;
   }
 );
 
@@ -52,18 +52,18 @@ export const courseSlice = createSlice({
       })
       .addCase(fetchCourseByIdAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.selectcourse= action.payload;
+        state.selectcourse = action.payload;
       })
       .addCase(updateCourseByIdAsync.pending, (state) => {
         state.status = "loading";
       })
       .addCase(updateCourseByIdAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.selectcourse= action.payload;
+        state.selectcourse = action.payload;
       });
   },
 });
 
 export const selectCourses = (state) => state.course.courses;
-export const selectCourseById=(state) => state.course.selectcourse;
+export const selectCourseById = (state) => state.course.selectcourse;
 export default courseSlice.reducer;
