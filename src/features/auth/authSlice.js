@@ -60,6 +60,7 @@ export const authSlice = createSlice({
       })
       .addCase(createUserAsync.fulfilled, (state, action) => {
         state.status = "idle";
+        window.localStorage.setItem("userDetails",JSON.stringify(action.payload) );
         state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.pending, (state) => {
@@ -67,6 +68,8 @@ export const authSlice = createSlice({
       })
       .addCase(checkUserAsync.fulfilled, (state, action) => {
         state.status = "idle";
+        console.log(action.payload)
+        window.localStorage.setItem("userDetails",JSON.stringify(action.payload) );
         state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
@@ -78,6 +81,7 @@ export const authSlice = createSlice({
       })
       .addCase(signOutAsync.fulfilled, (state, action) => {
         state.status = "idle";
+        window.localStorage.removeItem("userDetails");
         state.loggedInUser = null;
       });
   },

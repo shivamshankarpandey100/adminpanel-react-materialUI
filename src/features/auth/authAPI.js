@@ -36,7 +36,7 @@ export function checkUser(loginInfo) {
     //   reject({ message: 'user not found' });
     // }
     // // TODO: on server it will only return some info of user (not password)
-    console.log(loginInfo);
+
     try {
       const response = await fetch("http://localhost:8082/login/userlogin", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -49,6 +49,7 @@ export function checkUser(loginInfo) {
      
       if (response.ok) {
         const data = await response.json();
+        console.log(data)
         window.localStorage.setItem("isLoggedIn",true)
         resolve({ data });
       } else {

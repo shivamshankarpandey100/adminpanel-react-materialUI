@@ -92,11 +92,11 @@ const StudentListEdit = () => {
                         required:
                           "-Full Name is required \n - Cannot exceed 30 characters",
 
-                        pattern: {
-                          value:
-                            /^(?:([a-zA-Z]{2,4}\.){0,1} ?([a-zA-Z]{2,24})) ([a-zA-Z]{1,1}\. ){0,1}([a-zA-Z]{2,24} ){0,2}([A-Za-z']{2,24})((?:, ([a-zA-Z]{2,5}\.?)){0,4}?)$/gim,
-                          message: `Start with capital letter must contain surname/middlename`,
-                        },
+                        // pattern: {
+                        //   value:
+                        //     /^(?:([a-zA-Z]{2,4}\.){0,1} ?([a-zA-Z]{2,24})) ([a-zA-Z]{1,1}\. ){0,1}([a-zA-Z]{2,24} ){0,2}([A-Za-z']{2,24})((?:, ([a-zA-Z]{2,5}\.?)){0,4}?)$/gim,
+                        //   message: `Start with capital letter must contain surname/middlename`,
+                        // },
                       })}
                     />
                   </label>

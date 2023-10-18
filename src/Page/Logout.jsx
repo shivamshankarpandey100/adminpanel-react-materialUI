@@ -7,10 +7,10 @@ import { signOutAsync } from '../features/auth/authSlice';
 
 export default function Logout() {
  
-  const dispatch =useDispatch()
-  useEffect(() => {
-    dispatch(signOutAsync())
-  }, [dispatch]);
+  // const dispatch =useDispatch()
+  // useEffect(() => {
+  //   dispatch(signOutAsync())
+  // }, [dispatch]);
   return (
     <Box sx={{display:'flex'}}>
       <SideBar />

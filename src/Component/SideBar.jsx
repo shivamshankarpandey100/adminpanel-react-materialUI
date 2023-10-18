@@ -332,7 +332,7 @@ export default function SideBar() {
                  <ExitToAppIcon />
                 </ListItemIcon>
                 
-                <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0 }} onClick={(e)=>handleLogout(e)} />
               </ListItemButton>
             </ListItem>
          
