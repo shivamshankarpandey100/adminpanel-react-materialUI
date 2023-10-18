@@ -56,7 +56,7 @@ export default function StudentList() {
     <button type="submit" className='bt2'>
         <RotateLeftRoundedIcon/>
       </button>
-      <input type="text" placeholder="Search Student Via Using Email .........." name="search" className='srch' />
+      <input type="email" placeholder="Search Student Via Using Email .........." name="search" className='srch' />
       <button type="reset" className='bt1'>
         <SearchIcon/>
       </button>
