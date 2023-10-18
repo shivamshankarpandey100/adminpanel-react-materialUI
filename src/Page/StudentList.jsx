@@ -10,6 +10,9 @@ import style from "./css/custom.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { useNavigate } from 'react-router-dom';
+import { lightBlue } from '@mui/material/colors';
+import SearchIcon from '@mui/icons-material/Search';
+import RotateLeftRoundedIcon from '@mui/icons-material/RotateLeftRounded';
 export default function StudentList() {
  const column=["ID","Full Name","Mobile No:","Email","Course Id","Action"]
   const dispatch =useDispatch()
@@ -47,6 +50,20 @@ export default function StudentList() {
       <SideBar />
       <Box component="main" sx={{ flexGrow: 1, p: 3, marginTop: '55px' }}>
         <Typography variant="">
+
+        <div className="topnav">
+  <div className="search-container">
+    <button type="submit" className='bt2'>
+        <RotateLeftRoundedIcon/>
+      </button>
+      <input type="text" placeholder="Search Student Via Using Email .........." name="search" className='srch' />
+      <button type="reset" className='bt1'>
+        <SearchIcon/>
+      </button>
+      
+  </div>
+</div>
+
         <div className='heading'>Student List</div>
           <div>
             <table className="table">
