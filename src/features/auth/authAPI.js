@@ -2,24 +2,34 @@
 //signup user route
 // http://localhost:8082/user/saveuser
 export function createUser(userData) {
-  return new Promise(async (resolve) => {
-    console.log(userData);
-    const response = await fetch('http://localhost:8082/user/saveuser', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-      headers: { 'content-type': 'application/json' },
-    });
-    const data = await response.json();
-    // TODO: on server it will only return some info of user (not password)
-    console.log("called");
-    window.localStorage.setItem("isLoggedIn",true)
-    resolve({ data });
+  return new Promise(async (resolve,reject) => {
+    console.log(userData)
+    try {
+      const response = await fetch('http://localhost:8082/user/saveuser', {
+        method: 'POST',
+        body: JSON.stringify(userData),
+        headers: { 'content-type': 'application/json' },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data)
+        window.localStorage.setItem("isLoggedIn", true)
+        resolve({ data });
+      } else {
+        const err = await response.text();
+        reject(err);
+      }
+
+    } catch (error) {
+      reject(error);
+    }
+
   });
 }
 //Login userRoute
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
-  
+
     // const email = loginInfo.email;
     // const password = loginInfo.password;
     // const response = await fetch('http://localhost:8080/users?email=' + email);
@@ -44,20 +54,20 @@ export function checkUser(loginInfo) {
         headers: {
           "content-type": "application/json",
         },
-       
+
       });
-     
+
       if (response.ok) {
         const data = await response.json();
         console.log(data)
-        window.localStorage.setItem("isLoggedIn",true)
+        window.localStorage.setItem("isLoggedIn", true)
         resolve({ data });
       } else {
         const err = await response.text();
-        reject( err );
+        reject(err);
       }
     } catch (error) {
-      reject( error );
+      reject(error);
     }
 
   });

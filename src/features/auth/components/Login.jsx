@@ -3,6 +3,8 @@ import { selectError, selectLoggedInUser } from '../authSlice';
 import { Link, Navigate } from 'react-router-dom';
 import { checkUserAsync } from '../authSlice';
 import { useForm } from 'react-hook-form';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./css/signup.css"
 export default function Login() {
   const dispatch = useDispatch();
@@ -30,7 +32,16 @@ export default function Login() {
             dispatch(
               checkUserAsync({ email: data.email, password: data.password })
             );
-        
+            toast.success('Login Sucessfully', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
           })}
         >
           <p className="form-title">Login to your account</p>
@@ -85,6 +96,7 @@ export default function Login() {
           </p>
         </form>
       </div>
+      <ToastContainer/>
     </>
   );
 }

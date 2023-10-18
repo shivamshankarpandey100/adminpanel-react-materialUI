@@ -1,14 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import "./css/signup.css";
-import { selectLoggedInUser, createUserAsync } from "../authSlice";
+import { selectLoggedInUser, createUserAsync, selectError } from "../authSlice";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Signup() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
-
+  const err = useSelector(selectError)
   const {
     register,
     handleSubmit,
@@ -20,18 +21,27 @@ export default function Signup() {
       {user && <Navigate to="/" replace={true}></Navigate>}
       <div className="fluid-container">
         <form
-        noValidate
+          noValidate
           className="form-box"
           onSubmit={handleSubmit((data) => {
             dispatch(
               createUserAsync({
                 email: data.email,
                 password: data.password,
-                username:data.fullname
+                username: data.fullname
                 //TODO: this role can be directly given on backend
               })
             );
-            console.log(data);
+            toast.success('SignUp Successfull!', {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
           })}
         >
           <p className="form-title">Create your account</p>
@@ -65,6 +75,10 @@ export default function Signup() {
             />
             {errors.email && (
               <p className="text-red-500">{errors.email.message}</p>
+            )}
+            {err && (
+              <p className="text-red-500">{"User with given email exists"}</p>
+
             )}
             <span></span>
           </div>
@@ -110,8 +124,14 @@ export default function Signup() {
             Already a memmber{"  "}
             <Link to="/login">Log in</Link>
           </p>
+          {err && (
+            <p className="text-red-500">{"User Already exists"}</p>
+
+          )}
         </form>
+
       </div>
+      <ToastContainer />
     </>
   );
 }

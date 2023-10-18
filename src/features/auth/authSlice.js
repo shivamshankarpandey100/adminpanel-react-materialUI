@@ -9,10 +9,17 @@ const initialState = {
 
 export const createUserAsync = createAsyncThunk(
   "user/createUser",
-  async (userData) => {
-    const response = await createUser(userData);
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
+  async (userData,{rejectWithValue}) => {
+    try {
+      const response = await createUser(userData);
+      // The value we return becomes the `fulfilled` action payload
+      return response.data;
+      
+    } catch (error) {
+      console.log(error);
+      return rejectWithValue(error);
+    }
+  
   }
 );
 //This is for me for testing purpose
@@ -62,6 +69,10 @@ export const authSlice = createSlice({
         state.status = "idle";
         window.localStorage.setItem("userDetails",JSON.stringify(action.payload) );
         state.loggedInUser = action.payload;
+      })
+      .addCase(createUserAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.error = action.error;
       })
       .addCase(checkUserAsync.pending, (state) => {
         state.status = "loading";
