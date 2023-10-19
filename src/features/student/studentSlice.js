@@ -78,8 +78,14 @@ export const studentSlice = createSlice({
       })
       .addCase(fetchStudentByEmailAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.students = action.payload;
+      
+        if (Array.isArray(action.payload)) {
+          state.students = action.payload; // Already an array, no conversion needed
+        } else {
+          state.students = [action.payload]; // Convert a single object to an array with one element
+        }
       });
+      
   },
 });
 
