@@ -18,7 +18,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
+          {/* <Route path='/' element={ <Protected> <Dashboard /></Protected>}></Route>
         <Route path='/User' element={ <Protected> <User /></Protected> }></Route>
         <Route path='/AddStudent' element={<Protected> <AddStudent /></Protected> }></Route>
         <Route path='/StudentList' element={<Protected> <StudentList /></Protected>}></Route>
@@ -30,9 +30,9 @@ export default function App() {
         <Route path='/Protected' element={<Protected />}></Route>
 
         <Route path='/CourseEdit/:id' element={<Protected><CourseListEdit/></Protected>}></Route>
-        <Route path="/StudentEdit/:id" element={<Protected><StudentListEdit/></Protected>}></Route>
+        <Route path="/StudentEdit/:id" element={<Protected><StudentListEdit/></Protected>}></Route> */}
 
-          {/* <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/" element={<Dashboard />}></Route>
           <Route path="/User" element={<User />}></Route>
           <Route path="/AddStudent" element={<AddStudent />}></Route>
           <Route path="/StudentList" element={<StudentList />}></Route>
@@ -42,7 +42,7 @@ export default function App() {
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="/Signup" element={<SignUpPage />}></Route>
           <Route path="/CourseEdit/:id" element={<CourseListEdit />}></Route>
-          <Route path="/StudentEdit/:id" element={<StudentListEdit/>}></Route> */}
+          <Route path="/StudentEdit/:id" element={<StudentListEdit/>}></Route>
        
         </Routes>
       </BrowserRouter>

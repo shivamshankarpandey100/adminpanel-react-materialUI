@@ -21,7 +21,7 @@ export default function User() {
              
   <h2>User Profile</h2>
   <div className="card">
-    <img src={img} alt="John" className='card2' />
+    <img src={img} alt="user" className='card2' />
     <span className='ur'>User Name:  </span><span className='ur3'>{user.username}</span>
     <br></br>
     <span className='ur2'>Email: </span><span className='ur3'>{user.email}</span>
