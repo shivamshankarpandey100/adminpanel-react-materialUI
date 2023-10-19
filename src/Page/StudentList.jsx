@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchStudentByEmailAsync,
   fetchStudentsAsync,
+  selectError,
   selectStudents,
 } from "../features/student/studentSlice";
 import { FaTrash, FaEdit } from "react-icons/fa";
@@ -19,6 +20,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import RotateLeftRoundedIcon from "@mui/icons-material/RotateLeftRounded";
 import { useForm } from "react-hook-form";
 export default function StudentList() {
+  const err=useSelector(selectError)
   const {
     register,
     handleSubmit,
@@ -106,12 +108,18 @@ export default function StudentList() {
                     <SearchIcon />
                   </button>
                   {errors.search && (
+                    <div>
                     <p className="text-red-300">{errors.search.message}</p>
+                    </div>
                   )}
                 </div>
               </form>
-            </div>
+              {err && (
+              <p className="text-red-300">{"User with given email does not exists"}</p>
 
+            )}
+            </div>
+                          
             <div className="heading">Student List</div>
             <div>
               <table className="table">

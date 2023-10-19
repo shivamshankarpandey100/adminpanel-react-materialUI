@@ -30,14 +30,24 @@ export function updateStudentById(update, id) {
   });
 }
 export function fetchStudentByEmail(emailId) {
-  return new Promise(async (resolve) => {
+  return new Promise(async (resolve, reject) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch(
-      "http://localhost:8082/student/viewstudent/" + emailId
-    );
-    const data = await response.json();
-    console.log(data);
+    try {
+      const response = await fetch(
+        "http://localhost:8082/student/viewstudent/" + emailId
+      );
+      if (response.ok) {
+        const data = await response.json();
 
-    resolve({ data });
+       
+        resolve({ data });
+      } else {
+        const err = await response.text();
+        reject(err);
+      }
+    } catch (error) {
+      reject(error);
+    }
+
   });
 }
