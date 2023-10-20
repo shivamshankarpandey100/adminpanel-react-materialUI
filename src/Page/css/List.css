@@ -5,6 +5,8 @@
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+    border: 1px solid #ddd;
+   
 }
 .table th, .table td{
     border: 1px solid #ddd;
@@ -25,9 +27,7 @@
     color: white;
   }
   .table .btn1 {
-   
-   
-    background-color: green;
+   display: inline-block;
     color: black;
     padding: 10px;
     border: none;
@@ -35,30 +35,28 @@
     border-radius: 5px;
     text-align: center;
     margin: 5px;
+    font-size: 1.5rem;
   }
   
   .table .btn1:hover {
-    background-color:darkgreen;
-    color: white;
+    color: green;
      
   }
   .table .btn2 {
-   
-   
-    background-color: red;
-    color: black;
-    
+    display: inline-block;
+    color: black; 
     border: none;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
     padding: 10px;
     margin: 5px;
+    font-size: 1.4rem;
+
   }
   
   .table .btn2:hover {
-    background-color:darkred;
-    color: white;
+    color: rgb(220, 37, 37);
   }
   .heading{
     font-size:40px;

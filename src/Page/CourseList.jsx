@@ -71,20 +71,20 @@ export default function CoursesList() {
                           <td>{record.courseId}</td>
                           <td>{record.courseDetail}</td>
                           <td>
-                            <button
+                            <div
                               className="btn1"
                               onClick={() => {
                                 navigate(`/CourseEdit/${record.id}`);
                               }}
                             >
                               <FaEdit></FaEdit>
-                            </button>
-                            <button
+                            </div>
+                            <div
                               className="btn2"
                               onClick={(e) => handleRemove(e, record.id)}
                             >
                               <FaTrash></FaTrash>
-                            </button>
+                            </div>
                           </td>
                         </tr>
                       )

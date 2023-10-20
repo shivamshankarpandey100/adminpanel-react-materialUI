@@ -17,7 +17,7 @@ export default function Dashboard() {
             
           <img src={img} alt="user" className='esd' />
           <h1><u>ESD (Employee Skill's Devlopment Program) :</u></h1>
-          <hr></hr>
+          
           <b><h3>That is the Admin's Panel Dashboard</h3></b>
       </Typography>
       <Typography paragraph>

@@ -139,20 +139,20 @@ export default function StudentList() {
                       <td>{record.email}</td>
                       <td>{record.courseId}</td>
                       <td>
-                        <button
+                        <div
                           className="btn1"
                           onClick={() => {
                             navigate(`/StudentEdit/${record.id}`);
                           }}
                         >
                           <FaEdit></FaEdit>
-                        </button>
-                        <button
+                        </div>
+                        <div
                           className="btn2"
                           onClick={(e) => handleRemove(e, record.id)}
                         >
                           <FaTrash></FaTrash>
-                        </button>
+                        </div>
                       </td>
                     </tr>
                   ))}
