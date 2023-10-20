@@ -3,7 +3,7 @@
     background: transparent url(../image/ESD_LOGO_Rectangular.png) no-repeat;
     max-width: 45vh;
 }
-h4{
+h3{
     text-align: center;
     color:black;
 }
@@ -14,7 +14,10 @@ h4{
     position: fixed;
     backface-visibility:inherit;
 }
-span{
+.spn{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
+    text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 1px;
 }

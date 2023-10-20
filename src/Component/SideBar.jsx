@@ -24,7 +24,7 @@ import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import SubjectIcon from '@mui/icons-material/Subject';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-
+import AdminPanelSettingsSharpIcon from '@mui/icons-material/AdminPanelSettingsSharp';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signOutAsync } from '../features/auth/authSlice';
@@ -131,7 +131,8 @@ export default function SideBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-           Admin Panel 
+            <AdminPanelSettingsSharpIcon/>
+            <b><i>Admin Panel</i></b>
           </Typography>
         </Toolbar>
       </AppBar>

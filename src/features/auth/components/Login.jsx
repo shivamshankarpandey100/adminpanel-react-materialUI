@@ -5,6 +5,7 @@ import { checkUserAsync } from '../authSlice';
 import { useForm } from 'react-hook-form';
 import "react-toastify/dist/ReactToastify.css";
 import "./css/signup.css"
+import img from "../../../Page/image/ESD_LOGO_Rectangular.png"
 export default function Login() {
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ export default function Login() {
     <>
       {user && <Navigate to="/" replace={true}></Navigate>}
       <div className="fluid-container">
- 
+          
         <form
         noValidate
           className="form-box"
@@ -34,6 +35,9 @@ export default function Login() {
         
           })}
         >
+          
+          <img src={img} alt="user" />
+        
           <p className="form-title">Login to your account</p>
           <div className="input-container">
             <input
@@ -82,8 +86,13 @@ export default function Login() {
           </button>
           <p className="signup-link">
             Don't have an account {"  "}
-            <Link to="/signup">Sign up</Link>
+            <br></br>
+            <Link to="/signup" className='sinup'>Sign up</Link>
           </p>
+        
+          
+          
+         
         </form>
       </div>
     </>

@@ -4,6 +4,7 @@ import "./css/signup.css";
 import { selectLoggedInUser, createUserAsync, selectError } from "../authSlice";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import img from "../../../Page/image/ESD_LOGO_Rectangular.png"
 export default function Signup() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -33,6 +34,8 @@ export default function Signup() {
            
           })}
         >
+          <img src={img} alt="user" className="img1" />
+
           <p className="form-title">Create your account</p>
           <div className="input-container">
             <input
@@ -110,8 +113,9 @@ export default function Signup() {
             Sign up
           </button>
           <p className="signup-link">
-            Already a memmber{"  "}
-            <Link to="/login">Log in</Link>
+            Already a memmber...!{"  "}
+            <br></br>
+            <Link to="/login" className='sinup'>Log in</Link>
           </p>
           {err && (
             <p className="text-red-500">{"User Already exists"}</p>

@@ -16,14 +16,15 @@ export default function Dashboard() {
           
             
           <img src={img} alt="user" className='esd' />
-          <h3><u>ESD (Employee Skill's Devlopment Program) :</u></h3>
-          <b><h4>That is the Admin's Panel Dashboard</h4></b>
+          <h1><u>ESD (Employee Skill's Devlopment Program) :</u></h1>
+          <hr></hr>
+          <b><h3>That is the Admin's Panel Dashboard</h3></b>
       </Typography>
       <Typography paragraph>
-        <span>
+        <span className='spn'>
         ESD program is for the Student to Devloped him/her skills.
        Employee skill development is a crucial aspect of employee training and development programs.
-        Upskilling and reskilling employees is the primary focus of L&D programs in 2022, 
+        Upskilling and reskilling employees is the primary focus of L&D programs in 2023, 
         as it helps workers meet organizational standards, reduces replacement costs, 
         and improves workplace performance.
          Employee training programs help employees learn specific knowledge or 
