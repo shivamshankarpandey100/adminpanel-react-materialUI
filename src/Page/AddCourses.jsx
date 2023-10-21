@@ -146,6 +146,8 @@ export default function AddCourses() {
                     id="CourseId"
                     minLength={3}
                     maxLength={10}
+                    min={0}
+                    max={1000000}
                     {...register("CourseId", {
                       required: "CourseId  is required",
                       pattern: {
