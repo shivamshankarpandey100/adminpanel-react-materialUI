@@ -117,7 +117,7 @@ export default function AddCourses() {
               {/* <p className="message">Student Registration form </p> */}
               <div className="flex">
                 <label>
-                  Course name :
+                  Course Name :
                   <input
                     placeholder="Course name"
                     type="text"
@@ -136,7 +136,7 @@ export default function AddCourses() {
               </div>
               <div>
                 <label>
-                   CourseId:
+                   Course Id :
                   <input
                     placeholder="CourseId"
                     type="number"
@@ -169,7 +169,7 @@ export default function AddCourses() {
               
               <div>
                 <label>
-                  Course Description:
+                  Course Description :
                   <textarea
                     id="CourseDescription"
                     placeholder="Short description about course"

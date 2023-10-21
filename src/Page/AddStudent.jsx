@@ -171,7 +171,7 @@ export default function AddStudent() {
                 </div>
                 <div>
                   <label>
-                    Mobile no:
+                    Mobile no :
                     <input
                       placeholder="XXXXXXXXXX"
                       type="tel"
@@ -203,7 +203,7 @@ export default function AddStudent() {
                 </div>
                 <div>
                   <label>
-                    Email:
+                    Email :
                     <input
                       id="Email"
                       placeholder="xyz@gmail.com"
@@ -225,7 +225,7 @@ export default function AddStudent() {
                 </div>
                 <div>
                   <label>
-                    DOB(Date of Birth):
+                    DOB(Date of Birth) :
                     <input
                       id="DateOfBirth"
                       placeholder="DOB"
@@ -243,7 +243,7 @@ export default function AddStudent() {
                 </div>
                 <div>
                   <label>
-                    City:
+                    City :
                     <input
                       placeholder="City"
                       type="text"
@@ -261,7 +261,7 @@ export default function AddStudent() {
                 </div>
                 <div>
                   <label>
-                    Address:
+                    Address :
                     <input
                       id="Address"
                       placeholder="Address"
@@ -287,7 +287,7 @@ export default function AddStudent() {
                 <br />
                 <div>
                   <label>
-                    Select Course:
+                    Select Course :
                     <select
                       className="select-dropdown"
                       {...register("CourseId", {
