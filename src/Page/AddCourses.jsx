@@ -123,6 +123,8 @@ export default function AddCourses() {
                     type="text"
                     className="input"
                     id="CourseName"
+                    minLength={5}
+                    maxLength={50}
                     {...register("CourseName", {
                       required:
                         "Course Name is required",
@@ -175,9 +177,9 @@ export default function AddCourses() {
                     placeholder="Short description about course"
                     type="textarea"
                     className="input"
-                    rows={4}
+                    rows={5}
                     cols={50}
-                    maxLength={50}
+                    maxLength={70}
                     {...register("CourseDescription", {
                       required: "Course Description is required",
                     })}
