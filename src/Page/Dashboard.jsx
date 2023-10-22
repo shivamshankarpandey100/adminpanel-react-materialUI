@@ -53,15 +53,15 @@ export default function Dashboard() {
               </div>
               <div className="dashboard-center-items">
                 <div className="dashboard-flex-item">
-                  <div className="dashboard-round-image" id="aryan"></div>
-                  <h2 className="dashboard-h2">Database Administration</h2>
-                  <h3 className="dashboard-h3">Aryan Dwivedi</h3>
+                  <div className="dashboard-round-image" id="aryan"></div>                
+                  <h2 className="dashboard-h2">Aryan Dwivedi</h2>
+                  <h3 className="dashboard-h3">Database Administration</h3>
                 
                 </div>
                 <div className="dashboard-flex-item">
-                  <div className="dashboard-round-image" id="amisha"></div>
-                  <h2 className="dashboard-h2">Database Administration</h2>
-                  <h3 className="dashboard-h3">Amisha Kumar</h3>
+                  <div className="dashboard-round-image" id="amisha"></div>                 
+                  <h2 className="dashboard-h2">Amisha Kumar</h2>
+                  <h3 className="dashboard-h3">Database Administration</h3>
                 </div>
               </div>
               <footer className="dashboard-footer">Copyright ESD 2023</footer>

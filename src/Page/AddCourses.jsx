@@ -123,7 +123,7 @@ export default function AddCourses() {
                     type="text"
                     className="input"
                     id="CourseName"
-                    minLength={5}
+                    minLength={1}
                     maxLength={50}
                     {...register("CourseName", {
                       required:

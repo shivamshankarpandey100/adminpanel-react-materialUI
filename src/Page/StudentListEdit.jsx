@@ -212,7 +212,7 @@ const StudentListEdit = () => {
                     Select Course:
                     <select
                       className="select-dropdown"
-                      {...register("CourseId", {
+                      {...register("courseId", {
                         required: "Course  is required",
                       })}
                     
