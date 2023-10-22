@@ -7,10 +7,11 @@
     max-width: 350px;
     min-width: 200px;
     margin: auto;
-    text-align: center;
+    text-align: left;
     font-family: arial;
     background-color: #1976d2;
     color: white;
+    
   }
   
   .title {
@@ -46,14 +47,18 @@
   }
   .ur{
     color: black;
-    margin-left: -50px;
+    margin-left: 10px;
     font-weight: bolder;
+    text-align: left;
+  
   }
   .ur2{
     color: black;
-    margin-left: 20px;
+    margin-left: 10px;
     font-weight: bolder;
+    text-align: left;
   }
   .ur3{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
   }
